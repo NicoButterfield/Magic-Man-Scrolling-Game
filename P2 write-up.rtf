@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The theme of the game is structured around Magic Man. The story ark of the game is as follows.\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\fi960\sl440\partightenfactor0
+\cf2 \'93You are Magic man! Defender of America! For years you have kept this 		great country safe from all those who would try to harm it. Unfortunately, 		your enemies from years past have teamed up in an attempt to wreak havoc on 	those you swore to protect. They have been successful so far as they caught 		you off guard and have turned 50% of the population into frogs. What evil! 		Fortunately, there\'a0is still time to change them back but the clock is ticking. 		Due to the late start, you\'a0only have six minutes to transform the frogs back 		into people before they are stuck\'a0as frogs forever! Luckily, your enemies, 		Wiley Wizard and Professor Paranoia to\'a0name a few, are nothing if not good 		sports and realize the impossibility of your task.\'a0They guarantee that if you 		can save just ten people they will distribute an antidote\'a0all across the world 		that is capable of transforming the frogs back into people even\'a0after the spell 		becomes permanent. However, if you fail, they vow to condemn the rest\'a0of 		America to life as a frog for the rest of their days. The world\'92s fate rests in 		your hands. Good Luck.\'94\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf2 Essentially, the user control the Magic Man character with the arrow keys of the computer. He has various magical powers and is trying to save as many people from life as a frog as he can but he only has six minutes. He can gain back 25 seconds by collecting clocks items spawned in around the map and can slow down time by collecting snowflakes. These snowflakes also allow the user to use Magic man\'92s magical powers to become Snow Man who can shoot snowballs that are capable of destroying traps. When the user has the snowman power up they can shoot snowballs with the control button. Unfortunately, hitting these traps not only causes time to speed up but also force Magic Man to pause and subtracts an additional 50 seconds from the total time remaining. The traps also cause magic man to drop all of the magic dust that he is carrying. This magic dust is the source of Magic Man\'92s powers and without it he cannot perform his magic. He needs at least 5 dust clumps to transform one frog back to a person and needs one to shoot a snowball when he has the Snow Man power up. If you can manage to save ten people from life as a frog Magic Man saves the day and you win!! Otherwise, America's population will be entirely made up of frogs.\'a0\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl440\partightenfactor0
+\cf2 The implementation that allows the user to shoot snowballs by pressing the control key is the one that I am most proud of. To do this I created a method called scrollRight that only acts on Snowball images. To do so instead starting my loop from the left side of the grid I started it from the right and moved the snowball images across the screen that way. The trouble with this was that I wanted the snowballs to not only make a trap disappear when it hit it but also have itself disappear while not affecting the movement of any other items. This proved to be quite difficult as when I had the snowballs move they would act as the player and remove all the items they hit from the screen. I eventually figured out that I needed to provide code both in the scrollLeft and scrollRight methods because both had code affecting which images appeared on the screen. A few of my other implementations are as follows. I added collision methods for each object that each behaved in different ways when the user ran into a given image. For traps, the user\'92s magic dust would be set to 0, the time remaining would be decreased by 50 and the game speed would increase. Also if the user had the SnowMan power up the user\'92s Image would be changed from SnowMan to magicMan, losing the power-up. For Clocks and magic dust, time would be increased by 25 and magic dust would be increased by 1, respectively. For snowflakes, the users image would be changed to Snowman and the game speed would be decreased. For frogs, if the user had 5 clumps of magic dust the frog image would be removed and one of the three person images would be chosen and placed behind the user (The number of saves would also increase by 1). I also changed the win conditions for the games as it only has a timer now with an overarching goal of saving ten people from life as a frog but also has a component of trying to get the highest score possible.\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+}
